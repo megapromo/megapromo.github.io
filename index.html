@@ -3,30 +3,39 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Megapromo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MegaPromo</title>
     <style>
         body {
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(45deg, #0084d1, #1c80fb, #00adff);
-            overflow-x: hidden;
+            background-image: url('46811015-linhas-do-colorida-eletrico-cabos-em-prateleiras-foto.jpg');
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
+            overflow-x: hidden;
         }
 
         .container {
             text-align: center;
-            margin: 10px auto;
-            max-width: 95%;
+            padding: 40px 30px;
+            width: 80vw;
+            max-width: 800px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .logo {
-            width: 120px;
-            margin: 20px;
+            width: 150px;
+            margin-bottom: 50px;
             border-radius: 50%;
+            filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.2));
             opacity: 0;
             animation: fadeIn 1s ease forwards;
         }
@@ -34,26 +43,33 @@
         .botoes-container {
             display: flex;
             flex-direction: column;
-            gap: 20px;
-            align-items: center;
+            gap: 25px;
         }
 
         .botao-contato {
             background: rgba(255, 255, 255, 0.9);
-            padding: 15px 25px;
+            padding: 20px 35px;
             border-radius: 15px;
             text-decoration: none;
             color: #1a5f1a;
             font-weight: 600;
             font-size: 1.1em;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateX(-100vw);
             opacity: 0;
             animation: slideIn 0.8s ease forwards;
+            position: relative;
+            overflow: hidden;
             border: 2px solid transparent;
         }
 
         .botao-contato:nth-child(even) {
             animation-delay: 0.2s;
+            transform: translateX(100vw);
+        }
+
+        .botao-contato:nth-child(3) {
+            animation-delay: 0.4s;
         }
 
         .botao-contato:hover {
@@ -70,15 +86,18 @@
             align-items: center;
         }
 
-        h4, ul {
-            color: white;
-            max-width: 80%;
+        .golpe img {
+            border-radius: 30px;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
+        h4 {
+            color: white;
+            max-width: 50%;
+
+        }
+
+        ul {
+            color: white;
         }
 
         @keyframes fadeIn {
@@ -86,6 +105,7 @@
                 opacity: 0;
                 transform: translateY(-20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -101,10 +121,13 @@
 
         @media (max-width: 768px) {
             .container {
-                padding: 20px;
+                width: 90%;
+                padding: 30px 20px;
+                margin: 30px auto;
             }
+
             .botao-contato {
-                padding: 12px 20px;
+                padding: 16px 25px;
                 font-size: 1em;
             }
         }
@@ -114,42 +137,34 @@
             border-radius: 10px;
             color: white;
             padding: 15px;
-            margin-top: 20px;
-            text-align: center;
-            font-size: 0.9em;
+            margin-top: 30px;
         }
 
         li {
-            margin: 10px 0;
+            margin: 15px 0;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div style="background-color: white; margin-bottom: 15px; border-radius: 15px;">
-            <img src="logomegapromo.png" alt="Logo da Empresa" class="logo">
-        </div>
+        <img src="logomegapromo.png" alt="Logo da Empresa" class="logo">
 
         <div class="botoes-container">
-            <div>
-                <img src="bannerleto.webp" alt="Banner Promocional">
-            </div>
-
-            <a href="https://wa.me/5511976850417?text=Desejo%20Solicitar%20Orcamento."
-                class="botao-contato">
-                Solicitar Orçamento
-            </a>
-
-            <div style="display: flex; flex-direction: column; align-items: center;">
-                <img src="bannersilmega2.webp" alt="Banner Mega">
-                <img src="tabelafios.jpeg" alt="Tabela de Fios">
-            </div>
-
-            <a href="https://wa.me/5511976850417?text=Desejo%20Cadastrar%20Minha%20Empresa."
+            <a href="https://wa.me/55https://wa.me/5511976850417?text=Desejo%20Solicitar%20Orcamento%20Pessoa%20Juridica."
                 class="botao-contato" target="_blank">
-                Cadastrar Minha Empresa
+                Faturamento Pessoa Juridica
             </a>
+            <a href="https://wa.me/55https://wa.me/5511976850417?text=Desejo%20Solicitar%20Orcamento%20Pessoa%20Fisica."
+                class="botao-contato" target="_blank">
+                Faturamento Pessoa Fisica
+            </a>
+            <a href="https://wa.me/55https://wa.me/5511976850417?text=Tenho%20%20Uma%20Duvida."
+                class="botao-contato" target="_blank">
+                Duvidas
+            </a>
+
+
         </div>
 
         <footer>
