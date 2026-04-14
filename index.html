@@ -18,6 +18,51 @@
             overflow-x: hidden;
         }
 
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #25D366;
+            color: white;
+            border-radius: 50px;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            animation: pulse 1.8s infinite;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background: #1ebe5d;
+        }
+
+        /* Animação chamativa (gatilho visual) */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
         .container {
             text-align: center;
             padding: 40px 30px;
@@ -47,6 +92,7 @@
         }
 
         .botao-contato {
+            display: flex;
             background: rgba(255, 255, 255, 0.9);
             padding: 20px 35px;
             border-radius: 15px;
@@ -61,6 +107,9 @@
             position: relative;
             overflow: hidden;
             border: 2px solid transparent;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
         }
 
         .botao-contato:nth-child(even) {
@@ -143,6 +192,20 @@
         li {
             margin: 15px 0;
         }
+
+        .headline {
+            color: white;
+            font-size: 2em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .subheadline {
+            color: white;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
     </style>
 </head>
 
@@ -150,17 +213,31 @@
     <div class="container">
         <img src="logomegapromo.png" alt="Logo da Empresa" class="logo">
 
+        <h1 class="headline">
+            Soluções em Cabos e Materiais Elétricos com Preço de Atacado
+        </h1>
+
+        <p class="subheadline">
+            Atendimento rápido, orçamento sem compromisso e entrega ágil para sua empresa ou residência.
+        </p>
+
         <div class="botoes-container">
+
             <a href="https://wa.me/5511966490560?text=Desejo%20Solicitar%20Orcamento%20Pessoa%20Juridica."
                 class="botao-contato" target="_blank">
+                <img style="width: 50px ;padding-right: 50px ;" src="./logo zap.png" alt="logo zap">
                 Faturamento Pessoa Juridica
             </a>
+
             <a href="https://wa.me/5511966490560?text=Desejo%20Solicitar%20Orcamento%20Pessoa%20Fisica."
                 class="botao-contato" target="_blank">
+                <img style="width: 50px ;padding-right: 50px ;" src="./logo zap.png" alt="logo zap">
+
                 Faturamento Pessoa Fisica
             </a>
-            <a href="https://wa.me/5511966490560?text=Tenho%20%20Uma%20Duvida."
-                class="botao-contato" target="_blank">
+            <a href="https://wa.me/5511966490560?text=Tenho%20%20Uma%20Duvida." class="botao-contato" target="_blank">
+                <img style="width: 50px ;padding-right: 50px ;" src="./logo zap.png" alt="logo zap">
+
                 Duvidas
             </a>
 
@@ -168,10 +245,15 @@
         </div>
 
         <footer>
-            <h6>Mega Promo - Merchandising © - 2025 - Todos os direitos reservados</h6>
+            <h6>Mega Promo - Merchandising © - 2026 - Todos os direitos reservados</h6>
             <h6>Av. Marcos Penteado de Ulhoa Rodrigues, 939 - Alphaville, Barueri - SP, 06460-040</h6>
         </footer>
     </div>
+    <a href="https://wa.me/5511966490560?text=Olá!%20Quero%20falar%20com%20um%20atendente." class="whatsapp-float"
+        target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+        <span>Fale Conosco</span>
+    </a>
 </body>
 
 </html>
